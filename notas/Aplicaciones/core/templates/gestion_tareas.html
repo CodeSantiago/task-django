@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+
+<div class="row">
+    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+        <h2>Task management</h2>
+        <div class="card mt-4 custom-card ">
+            <div class="card-body">
+
+                <form action="/register_task/" method="post" class="task-form">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="tasktxt" placeholder="Title of your task">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="texttxt" placeholder="Description">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success bnt-block" >Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-8 col-xl-8">
+        <h1>TAREAS</h1>
+<div class="table-responsive py-2">
+    <table class="table table-striped text-after-color">
+        <thead>
+            <tr>
+                <th class="text-after-color" >Task</th>
+                <th class="text-after-color">Text</th>
+                <th colspan="2" class="text-after-color">Options</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for c in task %}
+            <tr>
+                <td class="text-before-color">{{c.task}}</td>
+                <td class="text-before-color">{{c.text}}</td>
+           
+                <td><a href="delete_task/{{c.task}}" class="btn btn-danger">Eliminar</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+    </div>
+</div>
+
+{% endblock %}

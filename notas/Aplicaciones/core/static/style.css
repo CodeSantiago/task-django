@@ -1,0 +1,71 @@
+*:focus {
+  outline: none;
+}
+body[data-bs-theme="dark"] .text-after-color {
+  color: #FFFFFF;
+  
+}
+
+
+
+.navbar-custom {
+  background-color: #8A3DD7; /* Color de fondo de la franja */
+}
+
+.navbar-custom-task {
+  color: #FFFFFF;
+  font-family: 'Roboto Condensed', sans-serif; /* personalizar letra del navbar */
+}
+
+/* Estilos para el modo oscuro */
+body[data-bs-theme="dark"] {
+  background-color: #2B2B2B;
+  color: #ffffff;
+
+}
+
+
+/* Estilos específicos para el modo oscuro */
+.navbar-brand[data-bs-theme="dark"] {
+  color: #ffffff;
+}
+
+.form-control[data-bs-theme="dark"] {
+  background-color: #343a40;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.navbar li::marker {
+  display: none;
+}
+
+/* Estilos para el modo oscuro */
+body[data-bs-theme="dark"] .navbar {
+  background-color: #0B0B0B;
+  color: #ffffff;
+}
+
+body[data-bs-theme="dark"] .btn {
+  background-color: #0B0B0B;
+  color: #ffffff;
+}
+
+body[data-bs-theme="dark"] .btn:hover {
+  background-color: #555555;
+}
+
+body[data-bs-theme="dark"] .btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.custom-card {
+  background-color: CFA7F6; /* Color de fondo predeterminado para la tarjeta */
+  color: #FFFFFF; /* Color de texto predeterminado para la tarjeta */
+}
+
+body[data-bs-theme="dark"] .custom-card {
+  background-color: #222222; /* Color de fondo de la tarjeta en modo oscuro */
+  color: #FFFFFF; /* Color de texto de la tarjeta en modo oscuro */
+}
